@@ -1,7 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
-  <tina />
+  <router-link to="/" >tina</router-link>
+  <router-link to="/tina2" >tina2</router-link>
+  <hr />
+  <router-view/>
+  
 </template>
 
 <script>
