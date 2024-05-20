@@ -1,16 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import './index.scss'
 import {createWebHashHistory,createRouter} from 'vue-router'
-import tina from './components/tina.vue'
-import tina2 from './components/tina2.vue'
+import Home from './views/Home.vue'
+import Doc from './views/Doc.vue'
 
 const history=createWebHashHistory()
 const router=createRouter({
     history:history,
     routes:[
-        { path:'/',component:tina},
-        { path:'/tina2',component:tina2}
+        { path:'/',component:Home},
+        { path:'/doc',component:Doc}
     ]
 
 })
