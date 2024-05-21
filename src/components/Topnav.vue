@@ -1,24 +1,17 @@
 <template>
-    <Topnav />
-  <div class="banner">
-   <h1>momoUI</h1>
-   <h2>自己封装的组件库</h2>
-   <p class="action">
-    <a>开始</a>
-    <a>github</a>
-   </p>
+  <div class="topnav">
+    <div class="log">logo</div>
+    <div class="menu"><span>菜单一</span><span>菜单二</span> </div>
   </div>
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
 export default {
-    components:{Topnav}
 
 }
 </script>
 
-<style lang="scss" scope>
+<style lang='scss' scope>
 .topnav{
     height:30px;
     background-color: aquamarine;
@@ -29,5 +22,4 @@ export default {
        padding-right: 10px;
     }
 }
-
 </style>
