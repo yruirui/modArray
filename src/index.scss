@@ -4,6 +4,9 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover{
+    border-bottom: 1px solid wheat;
+  }
 }
 * {
   box-sizing: border-box;

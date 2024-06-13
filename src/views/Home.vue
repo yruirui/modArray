@@ -1,6 +1,7 @@
 <template>
+<div>
     <Topnav />
-  <div class="banner">
+<div class="banner">
    <h1>momoUI</h1>
    <h2>自己封装的组件库</h2>
    <p class="action">
@@ -8,6 +9,7 @@
     <a>github</a>
    </p>
   </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -19,15 +21,19 @@ export default {
 </script>
 
 <style lang="scss" scope>
-.topnav{
-    height:30px;
-    background-color: aquamarine;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    span{
-       padding-right: 10px;
+.banner{
+    border:1px solid red;
+    height: 100vh;
+    >h1{
+        padding-top: 40vh;
+        text-align: center;
     }
+    >h2{
+       text-align:center
+    }
+
+    
 }
+
 
 </style>
