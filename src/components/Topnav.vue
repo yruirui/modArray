@@ -1,7 +1,8 @@
 <template>
   <div class="topnav">
-    <div class="log" @click="toggleMune">logo</div>
+    <div class="logo" @click="toggleMune">logo</div>
     <div class="menu"><span>菜单一</span><span>菜单二</span> </div>
+    <span class="toggleAside"></span>
   </div>
 </template>
 
@@ -20,16 +21,35 @@ setup(){
 </script>
 
 <style lang='scss' scope>
-.topnav{
-    height:30px;
+.topnav{  
     background-color: aquamarine;
     display: flex;
-    justify-content: space-between;
-    align-items:center;
+    padding: 16px;
     position: relative;
     z-index: 10;
-    span{
-       padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+
+  >.logo{
+    max-width: 6rem;
+    margin-right: auto;
+  }
+  >.menu{
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    >.li{
+      margin: 0 1rem;
+    }
+  }
+    
+    @media (max-width:500px) {
+      >.menu{
+        display: none;
+      }
+      >.logo{
+        margin: 0 auto;
+      }
     }
 }
 </style>
