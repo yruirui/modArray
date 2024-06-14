@@ -1,13 +1,21 @@
 <template>
   <div class="topnav">
-    <div class="log">logo</div>
+    <div class="log" @click="toggleMune">logo</div>
     <div class="menu"><span>菜单一</span><span>菜单二</span> </div>
   </div>
 </template>
 
 <script lang="ts">
+import { inject,Ref } from 'vue'
 export default {
-
+setup(){
+  const menuVisible=inject<Ref<boolean>>('xxx')
+    console.log("topnav的menuVisible"+menuVisible?.value)
+    const toggleMune=()=>{
+      menuVisible!.value=!menuVisible!.value
+    }
+    return{toggleMune}
+}
 }
 </script>
 
