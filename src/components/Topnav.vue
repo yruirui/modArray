@@ -1,8 +1,8 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMune">logo</div>
+    <div class="logo" >logo</div>
     <div class="menu"><span>菜单一</span><span>菜单二</span> </div>
-    <span class="toggleAside"></span>
+    <span class="toggleAside" @click="toggleMune"></span>
   </div>
 </template>
 
@@ -42,7 +42,17 @@ setup(){
       margin: 0 1rem;
     }
   }
-    
+  >.toggleAside{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: lightpink;
+    position:absolute;
+    left:16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
     @media (max-width:500px) {
       >.menu{
         display: none;
@@ -50,6 +60,7 @@ setup(){
       >.logo{
         margin: 0 auto;
       }
+      >.toggleAside{display: inline-block;}
     }
 }
 </style>
