@@ -18,6 +18,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items:center;
+    position: relative;
+    z-index: 10;
     span{
        padding-right: 10px;
     }

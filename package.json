@@ -2,17 +2,20 @@
   "name": "modArray",
   "version": "0.0.0",
   "scripts": {
+    "serve": "vue-cli-service serve",
     "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
-    
     "vue": "^3.0.0-rc.1",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "sass": "^1.26.10",
     "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "sass": "^1.26.10",
     "vite": "^1.0.0-rc.1"
-  }
+  },
+  "main": "index.js",
+  "author": "ruirui <yruirui96@gmail.com>",
+  "license": "MIT"
 }

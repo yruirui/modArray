@@ -5,7 +5,7 @@
    <h1>momoUI</h1>
    <h2>自己封装的组件库</h2>
    <p class="action">
-    <a>开始</a>
+    <router-link to="/doc">开始</router-link>
     <a>github</a>
    </p>
   </div>
