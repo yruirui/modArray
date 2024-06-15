@@ -40,11 +40,26 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.content{
+  display: flex;
+  height: 100vh;
+  border: 1px  solid red;
+ 
+  >aside{
+    flex-direction: column;
+  }
+  >main{  
+    
+    flex-grow:1;
+    flex-direction: column;
+    margin-left: 10px;
+    overflow-y: auto
+  }
+}
 aside{
   background: lightblue;
   width:150px;
   padding: 16px;
-  
   >h2{
    
   }
