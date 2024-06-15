@@ -1,75 +1,12 @@
 <template>
-  <div>
-    switch
-  </div>
-  <ul>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-
-  </ul>
+  <Switch />
+  
 </template>
 
 <script lang="ts">
+import Switch from '../lib/Switch.vue'
 export default {
-
+components:{Switch}
 }
 </script>
 
