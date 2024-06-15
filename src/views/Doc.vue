@@ -6,16 +6,16 @@
       <h2>组件列表</h2>
       <ol>
         <li>
-          <router-link to="doc/switch">Switch组件</router-link>
+          <router-link to="/doc/switch">Switch组件</router-link>
         </li>
         <li>
-          <router-link to="doc/button">BUtton组件</router-link>
+          <router-link to="/doc/button">BUtton组件</router-link>
         </li>
         <li>
-          <router-link to="doc/dialog">Dialog组件</router-link>
+          <router-link to="/doc/dialog">Dialog组件</router-link>
         </li>
         <li>
-          <router-link to="doc/dialog">Tabs组件</router-link>
+          <router-link to="/doc/tab">Tabs组件</router-link>
         </li>
       </ol>
     </aside>

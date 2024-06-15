@@ -4,10 +4,10 @@
 <div class="banner">
    <h1>momoUI</h1>
    <h2>自己封装的组件库</h2>
-   <p class="action">
-    <router-link to="/doc">开始</router-link>
-    <a>github</a>
-   </p>
+   <div class="action">
+    <router-link to="/doc"><div class="starButton">开始</div></router-link>
+    <a><div class="starButton">github</div></a>
+   </div>
   </div>
 </div>
 </template>
@@ -31,9 +31,21 @@ export default {
     >h2{
        text-align:center
     }
-
+    
     
 }
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.starButton{
+        width: 60px;
+        background-color: aquamarine;       
+        text-align: center;
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
 
-
+    }
 </style>
