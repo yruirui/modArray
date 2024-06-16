@@ -1,16 +1,18 @@
 <template>
- <button :class="{checked:x}" @click="toggelt"><span></span></button>
+ <button :class="{checked:value}" @click="toggelt"><span></span></button>
+ {{ value }}
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+
 export default {
-setup(){
-    const x=ref(false)
+    props:{value:Boolean},
+    setup(props,context){
+   
     const toggelt=()=>{
-          x.value=!x.value
+          context.emit('input',!props.value)
     }
-    return{x,toggelt}
+    return{toggelt}
 }
 }
 </script>
@@ -41,5 +43,8 @@ button.checked > span{
 }
 button.checked{
     background: lightblue;
+}
+button::focus{
+    outline:none
 }
 </style>
