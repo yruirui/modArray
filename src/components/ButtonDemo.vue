@@ -1,10 +1,14 @@
 <template>
-  button组件
+  <div>这里是Button的示例</div>
+  <h1>示例1</h1>
+  <div><Button>你好</Button></div>
+  
 </template>
 
-<script>
+<script lang="ts" >
+import Button from '../lib/Button.vue'
 export default {
-
+components:{Button}
 }
 </script>
 
