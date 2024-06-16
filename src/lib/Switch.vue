@@ -1,5 +1,5 @@
 <template>
- <button :class="{checked:value}" @click="toggelt"><span></span></button>
+ <button :class="{checked:value}" @click="toggle"><span></span></button>
  {{ value }}
 </template>
 
@@ -9,10 +9,10 @@ export default {
     props:{value:Boolean},
     setup(props,context){
    
-    const toggelt=()=>{
-          context.emit('input',!props.value)
+    const toggle=()=>{
+          context.emit('update:value',!props.value)
     }
-    return{toggelt}
+    return{toggle}
 }
 }
 </script>
@@ -27,6 +27,7 @@ button{
     background: gray;
     border-radius:  calc($h / 2);
     position: relative;
+   
 }
 span{
     position: absolute;
@@ -37,7 +38,7 @@ span{
     background:lightcoral ;
     border-radius:  calc($h2 / 2);
     transition:left 250ms;
-}
+  }
 button.checked > span{
     left:calc(100% - #{$h2} - 2px)
 }
@@ -46,5 +47,16 @@ button.checked{
 }
 button::focus{
     outline:none
+}
+button.checked:active{
+    >span{
+        width:$h2+4px;
+        margin-left: -4px;
+    }
+}
+button:active{
+    >span{
+        width: $h2+4px;
+    }
 }
 </style>
