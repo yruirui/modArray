@@ -1,5 +1,5 @@
 <template>
- <button :class="{checked:value}" @click="toggle"><span></span></button>
+ <button :class="{'gulu-checked':value}" @click="toggle"  class="gulu-switch"><span></span></button>
  {{ value }}
 </template>
 
@@ -17,10 +17,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 $h:22px;
 $h2: $h - 4px;
-button{
+.gulu-switch{
     height: $h;
     width: $h*2;
     border: none;
@@ -29,7 +29,7 @@ button{
     position: relative;
    
 }
-span{
+.gulu-switch>span{
     position: absolute;
     top:2px;
     left: 2px;
@@ -39,22 +39,22 @@ span{
     border-radius:  calc($h2 / 2);
     transition:left 250ms;
   }
-button.checked > span{
+ .gulu-switch.gulu-checked > span{
     left:calc(100% - #{$h2} - 2px)
 }
-button.checked{
+.gulu-switch.gulu-checked{
     background: lightblue;
 }
-button::focus{
+.gulu-switch::focus{
     outline:none
 }
-button.checked:active{
+.gulu-switch.gulu-checked:active{
     >span{
         width:$h2+4px;
         margin-left: -4px;
     }
 }
-button:active{
+.gulu-switch:active{
     >span{
         width: $h2+4px;
     }
