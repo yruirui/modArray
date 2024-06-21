@@ -25,10 +25,12 @@
    </div>
    <h1>示例四</h1>
    <div>
-    <Button theme="button"  :disabled="true">你好disabled</Button>
-    <Button theme="link" disabled>你好disabled</Button>
-    <Button theme="text" disabled>你好disabled</Button>
+    <Button theme="button"  :disabled="true">禁用按钮</Button>
+    <Button theme="link" disabled>禁用按钮</Button>
+    <Button theme="text" disabled>禁用按钮</Button>
    </div>
+   <h1>示例五</h1>
+   <div><Button loading></Button></div>
 </template>
 
 <script lang="ts" >

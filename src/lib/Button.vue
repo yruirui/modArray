@@ -1,6 +1,7 @@
 <template>
 <button   class="gulu-button" :class='classes' :disabled="disabled">  
-<slot> </slot>
+    <span class="gulu-loading-indicator" v-if="loading"></span>
+    <slot> </slot>
 </button>
 </template>
 
@@ -14,7 +15,8 @@ export default {
     disabled:{
        type:Boolean,
        default:false
-    }
+    },
+    loading:{type:Boolean,default:false}
  },
  setup(props){
     const {theme,size,level}=props;
@@ -68,7 +70,23 @@ $grey:#8d8787;
     &::-moz-focus-inner{
         border: 0;
     }
+    >.gulu-loading-indicator{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      border-radius: 8px;
+      border-color: $blue $blue $blue transparent;
+      border-style: solid;
+      border-width: 2px;
+      animation: gulu-spin 1s infinite linear;
+
+    }
   
+}
+@keyframes gulu-spin {
+   0%{transform: rotate(0deg);} 
+   100%{transform: rotate(360deg)}
 }
 .gulu-theme-text{
     border: none;
