@@ -23,6 +23,12 @@
     <Button level="main">主要按钮</Button>
     <Button level="danger">危险按钮</Button>
    </div>
+   <h1>示例四</h1>
+   <div>
+    <Button theme="button"  :disabled="true">你好disabled</Button>
+    <Button theme="link" disabled>你好disabled</Button>
+    <Button theme="text" disabled>你好disabled</Button>
+   </div>
 </template>
 
 <script lang="ts" >

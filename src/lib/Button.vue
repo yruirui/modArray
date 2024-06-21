@@ -1,5 +1,7 @@
 <template>
-<button   class="gulu-button" :class='classes'> <slot> </slot></button>
+<button   class="gulu-button" :class='classes' :disabled="disabled">  
+<slot> </slot>
+</button>
 </template>
 
 <script lang="ts">
@@ -8,7 +10,11 @@ export default {
  props:{
     theme:{type:String,default:'button'},
     size:{type:String,default:'normal'},
-    level:{type: String, default:''}
+    level:{type: String, default:''},
+    disabled:{
+       type:Boolean,
+       default:false
+    }
  },
  setup(props){
     const {theme,size,level}=props;
@@ -33,6 +39,7 @@ $color:#333;
 $blue:#40a9ff;
 $radius:4px;
 $red:red;
+$grey:#8d8787;
 .gulu-button{
     box-sizing: border-box;
     height: $h;
@@ -103,5 +110,26 @@ $red:red;
         color: white;
         background: darken($color: $red, $amount: 10%);
     }
+}
+.gulu-theme-button{
+    &[disabled]{
+
+        cursor: not-allowed;
+        color: $grey;
+    }
+}
+.gulu-theme-link{
+    &[disabled]{
+
+    cursor: not-allowed;
+    color: $grey;
+}
+}
+.gulu-theme-text{
+    &[disabled]{
+
+    cursor: not-allowed;
+    color: $grey;
+}
 }
 </style>

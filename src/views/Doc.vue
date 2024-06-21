@@ -6,6 +6,9 @@
       <h2>组件列表</h2>
       <ol>
         <li>
+          <router-link >布局组件</router-link>
+        </li>
+        <li>
           <router-link to="/doc/switch">Switch组件</router-link>
         </li>
         <li>
@@ -16,6 +19,12 @@
         </li>
         <li>
           <router-link to="/doc/tab">Tabs组件</router-link>
+        </li>
+        <li>
+          <router-link >日历组件</router-link>
+        </li>
+        <li>
+          <router-link >验证码组件</router-link>
         </li>
       </ol>
     </aside>
