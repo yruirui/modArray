@@ -30,7 +30,10 @@
     <Button theme="text" disabled>禁用按钮</Button>
    </div>
    <h1>示例五</h1>
-   <div><Button loading></Button></div>
+   <div>
+    <Button loading>加载中</Button>
+    <Button >加载完毕</Button>
+   </div>
 </template>
 
 <script lang="ts" >
