@@ -6,7 +6,10 @@
    :closeOnClickOverlay="false"
    :ok="f1"
    :cancel="f2"
+   
    >
+   <div>hi</div>
+   <div>hi!</div>
    </Dialog>
 </template>
 
@@ -20,6 +23,7 @@ export default {
 components:{Dialog,Button },
 setup(){
   const x = ref(false)
+  
     const toggle = () => {
       x.value = !x.value
     }
@@ -29,7 +33,7 @@ setup(){
     const f2=()=>{
       return true
     }
-  return{x,toggle,f1,f2}
+  return{x,toggle,f1,f2,}
 }
 }
 

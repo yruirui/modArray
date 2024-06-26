@@ -3,10 +3,9 @@
     <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
     <div  class="gulu-dialog-wrapper">
         <div  class="gulu-dialog">
-        <header>标题  <span class="gulu-dialog-close" @click="close"></span></header>
+        <header>{{Title}}  <span class="gulu-dialog-close" @click="close"></span></header>
         <main>
-            <p>one</p>
-            <p>two</p>
+            <slot></slot>
         </main>
         <footer>
             <Button level="main" @click="ok">ok</Button>
@@ -17,6 +16,7 @@
     </template>
 </template>
 <script>
+
 import Button from '../lib/Button.vue'
 export default {
 components:{Button},
@@ -24,7 +24,8 @@ props:{
     visible:{ type:String,default:false},
     closeOnClickOverlay:{ type:Boolean,default:true},
     ok:{type:Function},
-    cancel:{type:Function}
+    cancel:{type:Function},
+    Title:{type:String,default:'提示'}
 },
 setup(props,context){
     const close=()=>{
