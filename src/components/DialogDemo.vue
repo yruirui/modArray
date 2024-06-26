@@ -2,7 +2,12 @@
   dialog组件
   <h1>示例1</h1>
   <Button @click="toggle">toggle</Button>
-   <Dialog :visible="x"></Dialog>
+   <Dialog v-model:visible="x" 
+   :closeOnClickOverlay="false"
+   :ok="f1"
+   :cancel="f2"
+   >
+   </Dialog>
 </template>
 
 <script lang="ts">
@@ -18,7 +23,13 @@ setup(){
     const toggle = () => {
       x.value = !x.value
     }
-  return{x,toggle}
+    const f1=()=>{
+      return true
+    }
+    const f2=()=>{
+      return true
+    }
+  return{x,toggle,f1,f2}
 }
 }
 
