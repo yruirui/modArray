@@ -6,10 +6,15 @@
    :closeOnClickOverlay="false"
    :ok="f1"
    :cancel="f2"
-   
    >
-   <div>hi</div>
-   <div>hi!</div>
+   <template v-slot:content>
+    <div>hi</div>
+    <div>hi!</div>
+   </template>
+   <template v-slot:Title>
+    <strong>标签</strong>
+   </template>
+   
    </Dialog>
 </template>
 

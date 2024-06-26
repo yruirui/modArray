@@ -3,9 +3,9 @@
     <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
     <div  class="gulu-dialog-wrapper">
         <div  class="gulu-dialog">
-        <header>{{Title}}  <span class="gulu-dialog-close" @click="close"></span></header>
+        <header><slot name="Title"></slot>  <span class="gulu-dialog-close" @click="close"></span></header>
         <main>
-            <slot></slot>
+            <slot name="content"></slot>
         </main>
         <footer>
             <Button level="main" @click="ok">ok</Button>
