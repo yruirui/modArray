@@ -56,6 +56,7 @@ export default {
  
   >aside{
     flex-direction: column;
+    overflow-y: auto
   }
   >main{  
     

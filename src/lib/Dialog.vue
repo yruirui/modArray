@@ -19,7 +19,7 @@
 </template>
 <script>
 
-import Button from '../lib/Button.vue'
+import Button from './Button.vue'
 export default {
 components:{Button},
 props:{
@@ -31,7 +31,7 @@ props:{
 },
 setup(props,context){
     const close=()=>{
-        context.emit('update:visible')
+        context.emit('update:visible',false)
     }
     const onClickOverlay=()=>{
         if(props.CloseOnClickOverlay){close()}
