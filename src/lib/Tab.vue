@@ -1,8 +1,8 @@
 <template>
-  Tab组件
+  tab
 </template>
 
-<script>
+<script lang="ts">
 export default {
 
 }

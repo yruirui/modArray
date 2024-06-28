@@ -26,6 +26,7 @@
         <li>
           <router-link >验证码组件</router-link>
         </li>
+        <li><router-link>图标组件</router-link></li>
       </ol>
     </aside>
     <main><router-view></router-view></main>
