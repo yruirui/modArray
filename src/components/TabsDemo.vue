@@ -6,11 +6,14 @@
   </Tabs>
 </template>
 
-<script>
-import Tabs from '../lib/Tab.vue'
-import Tab from '../lib/Tabs.vue'
+<script lang="ts">
+import Tab from '../lib/Tab.vue'
+import Tabs from '../lib/Tabs.vue'
 export default {
- components:{Tabs,Tab}
+ components:{Tabs,Tab},
+ setup(){
+  
+ }
 }
 </script>
 

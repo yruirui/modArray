@@ -1,5 +1,5 @@
 <template>
-  tab
+  <slot ></slot>
 </template>
 
 <script lang="ts">

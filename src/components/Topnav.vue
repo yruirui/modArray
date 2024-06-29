@@ -11,7 +11,6 @@ import { inject,Ref } from 'vue'
 export default {
 setup(){
   const menuVisible=inject<Ref<boolean>>('xxx')
-    console.log("topnav的menuVisible"+menuVisible?.value)
     const toggleMune=()=>{
       menuVisible!.value=!menuVisible!.value
     }
