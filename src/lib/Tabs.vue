@@ -27,7 +27,7 @@ export default{
        const container=ref<HTMLDivElement>(null)
        
       watchEffect(()=>{
-        if (selectedItem.value){
+        if (selectedItem.value && indicator.value){
             const {width}=selectedItem.value.getBoundingClientRect()
             indicator.value.style.width=width+'px'
             const {left:left1}=container.value.getBoundingClientRect()
