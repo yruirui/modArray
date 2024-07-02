@@ -1,7 +1,10 @@
 <template>
  <div class="gulu-tabs">
     <div class="gulu-tabs-nav" ref='container'>
-        <div @click="select(t)" class="gulu-tabs-nav-item" :class="{selected:t==selected}" v-for="(t ,index) in Titles" :key="index"  :ref="el=>{if(el) navItems[index]=el} ">{{ t }}</div>
+        <div @click="select(t)" class="gulu-tabs-nav-item"
+         :class="{selected:t==selected}"
+          v-for="(t ,index) in Titles" :key="index" 
+           :ref="el=>{if(t==selected) selectedItem=el} ">{{ t }}</div>
         <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="gulu-tabs-content" >
@@ -18,16 +21,17 @@ export default{
         selected:{type:String}
     },
     setup(props,context){
-       const navItems=ref<HTMLDivElement>([]) 
+       
+       const selectedItem= ref<HTMLDivElement>(null)
        const indicator=ref<HTMLDivElement>(null)
        const container=ref<HTMLDivElement>(null)
        const x=()=>{
-        const divs=navItems.value
-        const result=divs.filter(div=>div.classList.contains('selected'))[0]
-        const {width}=result.getBoundingClientRect()
+        
+        
+        const {width}=selectedItem.value.getBoundingClientRect()
         indicator.value.style.width=width+'px'
         const {left:left1}=container.value.getBoundingClientRect()
-        const {left:left2}=result.getBoundingClientRect()
+        const {left:left2}=selectedItem.value.getBoundingClientRect()
         const left=left2-left1
         indicator.value.style.left=left+'px'
        }
@@ -52,7 +56,13 @@ export default{
        const select=(title:String)=>{
         context.emit('update:selected',title)
        } 
-       return{defaults,Titles,current,select,navItems,indicator,container}
+       return{defaults,
+        Titles,
+        current,
+        select,
+        selectedItem,
+        indicator,
+        container}
     }
     
 }
