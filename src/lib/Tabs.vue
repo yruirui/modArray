@@ -10,6 +10,7 @@
     <div class="gulu-tabs-content" >
         <component  :is="current" /> 
     </div>
+    
  </div>
 </template>
 

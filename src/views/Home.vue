@@ -1,7 +1,8 @@
 <template>
+    <div>
 <div class="topnavBanner">
     <Topnav />
-<div class="banner">
+  <div class="banner">
    <h1>momoUI</h1>
    <h2>自己封装的组件库</h2>
    <div class="action">
@@ -9,6 +10,19 @@
     <a><div class="starButton" a="http://github.com">github</div></a>
    </div>
   </div>
+ </div>
+     <div class="features">
+        <svg class="icon" >
+       <use xlink:href="#icon-tubiaozhizuomoban"></use>
+      </svg>
+      <svg class="icon" >
+       <use xlink:href="#icon-typescript"></use>
+      </svg>
+      <svg class="icon" >
+       <use xlink:href="#icon-Vue"></use>
+      </svg>
+     </div>
+      
 </div>
 </template>
 
@@ -57,4 +71,10 @@ $color:#28d1c9;
         padding: 10px 0px;
 
     }
+.features{
+    >svg{
+        width: 64px;
+        height: 64px;
+    }
+}
 </style>

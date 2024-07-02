@@ -1,6 +1,11 @@
 <template>
   <div class="topnav">
-    <div class="logo" >logo</div>
+    <div class="logo" >
+      <svg class="icon" >
+       <use xlink:href="#icon-hua"></use>
+      </svg>
+      
+   </div>
     <div class="menu"><span>菜单一</span><span>菜单二</span> </div>
     <span class="toggleAside" @click="toggleMune"></span>
   </div>
@@ -33,6 +38,10 @@ $color:#004974;
   >.logo{
     max-width: 6rem;
     margin-right: auto;
+    >svg{
+      width: 32px;
+      height: 32px;
+    }
   }
   >.menu{
     display: flex;
