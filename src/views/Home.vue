@@ -6,7 +6,7 @@
    <h2>自己封装的组件库</h2>
    <div class="action">
     <router-link to="/doc"><div class="starButton">开始</div></router-link>
-    <a><div class="starButton">github</div></a>
+    <a><div class="starButton" a="http://github.com">github</div></a>
    </div>
   </div>
 </div>
@@ -21,12 +21,14 @@ export default {
 </script>
 
 <style lang="scss" scope>
+$green:#02bcd0;
+$color:#28d1c9;
 .topnavBanner{
     background: rgb(66,255,253);
     background: linear-gradient(145deg, rgba(66,255,253,1) 0%, rgba(231,233,230,1) 100%, rgba(0,212,255,1) 100%);
 }
 .banner{
-    border:1px solid red;
+    color: $color;
     height: 100vh;
     >h1{
         padding-top: 40vh;
@@ -45,11 +47,14 @@ export default {
 }
 .starButton{
         width: 60px;
-        background-color: aquamarine;       
+        background-color: $green;       
         text-align: center;
         float: left;
         margin-left: 10px;
         margin-top: 10px;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 0px;
 
     }
 </style>

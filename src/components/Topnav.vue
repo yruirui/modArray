@@ -20,8 +20,9 @@ setup(){
 </script>
 
 <style lang='scss' scope>
+$color:#004974;
 .topnav{  
-    
+    color:$color;
     display: flex;
     padding: 16px;
     position: relative;
