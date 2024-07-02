@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="topnavBanner">
     <Topnav />
 <div class="banner">
    <h1>momoUI</h1>
@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style lang="scss" scope>
+.topnavBanner{
+    background: rgb(66,255,253);
+    background: linear-gradient(145deg, rgba(66,255,253,1) 0%, rgba(231,233,230,1) 100%, rgba(0,212,255,1) 100%);
+}
 .banner{
     border:1px solid red;
     height: 100vh;

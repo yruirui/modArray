@@ -21,7 +21,7 @@ setup(){
 
 <style lang='scss' scope>
 .topnav{  
-    background-color: aquamarine;
+    
     display: flex;
     padding: 16px;
     position: relative;
