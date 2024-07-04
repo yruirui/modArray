@@ -1,85 +1,82 @@
 <template>
-<div>
-  <topnav />
-  <div class="content">
-    <aside v-if="menuVisible">
-      <h2>组件列表</h2>
-      <ol>
-        <li>
-          <router-link >布局组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/switch">Switch组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/button">BUtton组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/dialog">Dialog组件</router-link>
-        </li>
-        <li>
-          <router-link to="/doc/tab">Tabs组件</router-link>
-        </li>
-        <li>
-          <router-link >日历组件</router-link>
-        </li>
-        <li>
-          <router-link >验证码组件</router-link>
-        </li>
-        <li><router-link>图标组件</router-link></li>
-      </ol>
-    </aside>
-    <main><router-view></router-view></main>
+  <div>
+    <topnav toggleMenuButtonVisible />
+    <div class="content">
+      <aside v-if="menuVisible">
+        <h2>组件列表</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/switch">Switch组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/button">BUtton组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/dialog">Dialog组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tab">Tabs组件</router-link>
+          </li>
+          <li>
+            <router-link>日历组件</router-link>
+          </li>
+          <li>
+            <router-link>验证码组件</router-link>
+          </li>
+          <li><router-link>图标组件</router-link></li>
+          <li>
+            <router-link>布局组件</router-link>
+          </li>
+        </ol>
+      </aside>
+      <main><router-view></router-view></main>
+    </div>
   </div>
-</div>
 </template>
 
+
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
-import { inject, Ref,} from 'vue'
+import Topnav from "../components/Topnav.vue";
+import { inject, Ref } from "vue";
 
 export default {
-  components:{Topnav},
-  setup(){
-    
-    const menuVisible =inject<Ref<Boolean>>('xxx')
-    return{menuVisible}
-    
-  }
-}
+  components: { Topnav },
+  setup() {
+    const menuVisible = inject<Ref<Boolean>>("xxx");
+    return { menuVisible };
+  },
+};
 </script>
 
 <style lang='scss' scoped>
-.content{
+.content {
   display: flex;
   height: 100vh;
-  border: 1px  solid red;
- 
-  >aside{
+  border: 1px solid red;
+
+  > aside {
     flex-direction: column;
-    overflow-y: auto
+    overflow-y: auto;
   }
-  >main{  
-    
-    flex-grow:1;
+  > main {
+    flex-grow: 1;
     flex-direction: column;
     margin-left: 10px;
-    overflow-y: auto
+    overflow-y: auto;
   }
 }
-aside{
+aside {
   background: lightblue;
-  width:150px;
+  width: 150px;
   padding: 16px;
-  >h2{
-   
+  > h2 {
   }
-  >ol>li{
-   padding: 4px 0;
+  > ol > li {
+    padding: 4px 0;
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     padding-top: 50px;
   }
