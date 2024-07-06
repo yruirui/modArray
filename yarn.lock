@@ -346,7 +346,7 @@
     "@vue/compiler-core" "3.5.0-alpha.2"
     "@vue/shared" "3.5.0-alpha.2"
 
-"@vue/compiler-sfc@3.4.31", "@vue/compiler-sfc@^3.0.3", "@vue/compiler-sfc@^3.4.31":
+"@vue/compiler-sfc@3.4.31", "@vue/compiler-sfc@^3.0.3":
   version "3.4.31"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.4.31.tgz#cc6bfccda17df8268cc5440842277f61623c591f"
   integrity sha512-einJxqEw8IIJxzmnxmJBuK2usI+lJonl53foq+9etB2HAzlPjAS/wa7r0uUpXw5ByX3/0uswVSrjNb17vJm1kQ==
@@ -361,7 +361,7 @@
     postcss "^8.4.38"
     source-map-js "^1.2.0"
 
-"@vue/compiler-sfc@3.5.0-alpha.2":
+"@vue/compiler-sfc@3.5.0-alpha.2", "@vue/compiler-sfc@^3.5.0-alpha.2":
   version "3.5.0-alpha.2"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.0-alpha.2.tgz#423a42f4d481e4d97e2a26a32d787dcc621499d7"
   integrity sha512-tdTA3AseuL2PcT9xSEBr/3mRFiGEb8BMNydcNWgGwjQHUnVS/iJDkD3ob+QDTc4gdXENu0khQbrSb2cSvNXvTA==
@@ -1118,6 +1118,11 @@ inherits@2.0.3:
   version "2.0.3"
   resolved "https://registry.npmmirror.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==
+
+install@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.npmmirror.com/install/-/install-0.13.0.tgz#6af6e9da9dd0987de2ab420f78e60d9c17260776"
+  integrity sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
 
 is-binary-path@~2.1.0:
   version "2.1.0"
