@@ -54,9 +54,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.router-link-active {
-  text-decoration: underline;
-}
 .content {
   display: flex;
   height: 100vh;
@@ -75,11 +72,20 @@ export default {
 aside {
   background: lightblue;
   width: 150px;
-  padding: 16px;
+  padding: 16px 0;
   > h2 {
+    padding: 0 16px;
   }
   > ol > li {
-    padding: 4px 0;
+    > a {
+      display: block;
+      padding: 4px 16px;
+    }
+
+    .router-link-active {
+      text-decoration: underline;
+      background: white;
+    }
   }
   @media (max-width: 500px) {
     position: fixed;
