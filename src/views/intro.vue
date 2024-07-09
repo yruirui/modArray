@@ -1,6 +1,8 @@
-<template>这里是intro</template>
+<template>
+  <MarkDown path="../markdown/intro.md"></MarkDown>
+</template>
 
-<script>
+<script >
 export default {};
 </script>
 

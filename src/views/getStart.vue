@@ -1,4 +1,6 @@
-<template>这里是开始页</template>
+<template>
+  <MarkDown path="../markdown/get-start.md"></MarkDown>
+</template>
 
 <script>
 export default {};

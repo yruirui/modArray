@@ -6,6 +6,7 @@
         <h2>文档</h2>
         <ol>
           <li><router-link to="/doc/intro">介绍</router-link></li>
+          <li><router-link to="/doc/install">安装</router-link></li>
           <li><router-link to="/doc/get-start">开始</router-link></li>
         </ol>
         <h2>组件列表</h2>
@@ -23,14 +24,14 @@
             <router-link to="/doc/tab">Tabs组件</router-link>
           </li>
           <li>
-            <router-link>日历组件</router-link>
+            <router-link to="/doc/tab">日历组件</router-link>
           </li>
           <li>
-            <router-link>验证码组件</router-link>
+            <router-link to="/doc/tab">验证码组件</router-link>
           </li>
-          <li><router-link>图标组件</router-link></li>
+          <li><router-link to="/doc/tab">图标组件</router-link></li>
           <li>
-            <router-link>布局组件</router-link>
+            <router-link to="/doc/tab">布局组件</router-link>
           </li>
         </ol>
       </aside>
@@ -65,7 +66,7 @@ export default {
   > main {
     flex-grow: 1;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 20px;
     overflow-y: auto;
   }
 }
@@ -83,7 +84,6 @@ aside {
     }
 
     .router-link-active {
-      text-decoration: underline;
       background: white;
     }
   }
