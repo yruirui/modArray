@@ -8,7 +8,6 @@ import DialogDemo from './components/DialogDemo.vue'
 import Intro from './views/intro.vue'
 import getStart from './views/getStart.vue'
 import install from './views/install.vue'
-import { h } from 'vue'
 
 const history=createWebHashHistory()
 export const router=createRouter({

@@ -1,21 +1,69 @@
 <template>
-  <div>Switch示例</div>
-  <Switch v-model:value="bool"/>
-  
+  <div>
+    <h1>Switch组件示例</h1>
+    <div class="demo">
+      <h2>常规用法</h2>
+      <div class="demo-component">
+        <Switch1Demo />
+      </div>
+      <div class="demo-action">
+        <Botton>查看代码</Botton>
+      </div>
+      <div class="demo-code">
+        <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+      </div>
+    </div>
+    <div class="demo">
+      <h2>支持disable</h2>
+      <div class="demo-component">
+        <Switch2Demo />
+      </div>
+      <div class="demo-action">
+        <Button> 查看代码</Button>
+      </div>
+      <div class="demo-code">
+        <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-import Switch from '../lib/Switch.vue'
+import { ref } from "vue";
+import Switch from "../lib/Switch.vue";
+import Button from "../lib/Button.vue";
+import Switch1Demo from "../components/switch1Demo.vue";
+import Switch2Demo from "../components/switch2Demo.vue";
 export default {
-components:{Switch},
-setup(){
-   const bool=ref(true)
-   return{bool}
-}
-}
+  components: { Switch, Button, Switch1Demo, Switch2Demo },
+  setup() {
+    const bool = ref(true);
+    return { bool };
+  },
+};
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+$border-color: #d9d9d9;
+.demo {
+  border: 1px solid $border-color;
+  margin: 16px 0 32px;
+  > h2 {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-bottom: 1px solid $border-color;
+  }
+  &-component {
+    padding: 16px;
+  }
+  &-action {
+    padding: 8px 16px;
+    border-top: 1px dashed $border-color;
+  }
+  &-code {
+    padding: 8px 16px;
+    border-top: 1px dashed $border-color;
+    margin: 0;
+  }
+}
 </style>
