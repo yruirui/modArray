@@ -34,10 +34,12 @@ import Switch from "../lib/Switch.vue";
 import Button from "../lib/Button.vue";
 import Switch1Demo from "../components/switch1Demo.vue";
 import Switch2Demo from "../components/switch2Demo.vue";
+
 export default {
   components: { Switch, Button, Switch1Demo, Switch2Demo },
   setup() {
     const bool = ref(true);
+    console.log(Switch1Demo);
     return { bool };
   },
 };
