@@ -91,12 +91,18 @@ $color: #28d1c9;
 }
 .features {
   margin: 64px auto;
-  width: 400px;
+  padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
+    > ul > li {
+      width: 50%;
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
+    > ul > li {
+      width: 33.33%;
+    }
   }
   > ul {
     display: flex;

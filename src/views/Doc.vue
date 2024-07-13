@@ -74,6 +74,7 @@ aside {
   background: lightblue;
   width: 150px;
   padding: 16px 0;
+  z-index: 1;
   > h2 {
     padding: 0 16px;
   }

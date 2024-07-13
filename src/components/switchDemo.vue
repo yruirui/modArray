@@ -2,7 +2,7 @@
   <div>
     <h1>Switch组件示例</h1>
     <Demo :component="Switch1Demo"></Demo>
-    <hr />
+
     <Demo :component="Switch2Demo"></Demo>
   </div>
 </template>
