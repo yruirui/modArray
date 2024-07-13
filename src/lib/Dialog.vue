@@ -1,82 +1,86 @@
 <template>
-    <template v-if="visible">
-        <Teleport to="body">
-            <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-            <div  class="gulu-dialog-wrapper">
-                <div  class="gulu-dialog">
-                <header><slot name="Title"></slot>  <span class="gulu-dialog-close" @click="close"></span></header>
-                <main>
-                    <slot name="content"></slot>
-                </main>
-                <footer>
-                    <Button level="main" @click="ok">ok</Button>
-                    <Button @click="cancel">cancel</Button>
-                </footer>
-                </div>
-            </div>
-        </Teleport>
-    </template>
+  <template v-if="visible">
+    <Teleport to="body">
+      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="gulu-dialog-wrapper">
+        <div class="gulu-dialog">
+          <header>
+            <slot name="Title"></slot>
+            <span class="gulu-dialog-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">ok</Button>
+            <Button @click="cancel">cancel</Button>
+          </footer>
+        </div>
+      </div>
+    </Teleport>
+  </template>
 </template>
 <script>
-
-import Button from './Button.vue'
+import Button from "./Button.vue";
 export default {
-components:{Button},
-props:{
-    visible:{ type:String,default:false},
-    closeOnClickOverlay:{ type:Boolean,default:true},
-    ok:{type:Function},
-    cancel:{type:Function},
-    Title:{type:String,default:'提示'}
-},
-setup(props,context){
-    const close=()=>{
-        context.emit('update:visible',false)
-    }
-    const onClickOverlay=()=>{
-        if(props.CloseOnClickOverlay){close()}
-    }
-    const ok=()=>{
-        if(props.ok?.()!==false){
-            close()
-        }
-    }
-    const cancel=()=>{
-        if(props.cancel?.()!==false){
-            close()
-        }
-    }
-    return{ close,onClickOverlay,cancel,ok}
-}
-}
+  components: { Button },
+  props: {
+    visible: { type: Boolean, default: false },
+    closeOnClickOverlay: { type: Boolean, default: true },
+    ok: { type: Function },
+    cancel: { type: Function },
+    Title: { type: String, default: "提示" },
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit("update:visible", false);
+    };
+    const onClickOverlay = () => {
+      if (props.CloseOnClickOverlay) {
+        close();
+      }
+    };
+    const ok = () => {
+      if (props.ok?.() !== false) {
+        close();
+      }
+    };
+    const cancel = () => {
+      if (props.cancel?.() !== false) {
+        close();
+      }
+    };
+    return { close, onClickOverlay, cancel, ok };
+  },
+};
 </script>
 
 <style lang="scss">
-$radius:4px;
-$border-color:#d9d9d9;
-.gulu-dialog{
-    background: white;
-    border-radius: $radius;
-    box-shadow: 0 0 3px fade-out($color: #000000, $amount: 0.5);
-    min-width: 15em;
-    max-width: 90%;
-    &-overlay{
-        position:fixed;
-        top:0;
-        left:0;
-        width: 100%;
-        height:100%;
-        background: fade-out($color: black, $amount: 0.5);
-        z-index: 10;
-    }
-    &-wrapper{
-        position:fixed;
-        left:50%;
-        top:50%;
-        transform:translate(-50%,-50%);
-        z-index: 11;
-    }
-    >header {
+$radius: 4px;
+$border-color: #d9d9d9;
+.gulu-dialog {
+  background: white;
+  border-radius: $radius;
+  box-shadow: 0 0 3px fade-out($color: #000000, $amount: 0.5);
+  min-width: 15em;
+  max-width: 90%;
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: fade-out($color: black, $amount: 0.5);
+    z-index: 10;
+  }
+  &-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+  > header {
     padding: 12px 16px;
     border-bottom: 1px solid $border-color;
     display: flex;
@@ -84,10 +88,10 @@ $border-color:#d9d9d9;
     justify-content: space-between;
     font-size: 20px;
   }
-  >main {
+  > main {
     padding: 12px 16px;
   }
-  >footer {
+  > footer {
     border-top: 1px solid $border-color;
     padding: 12px 16px;
     text-align: right;
@@ -100,7 +104,7 @@ $border-color:#d9d9d9;
     cursor: pointer;
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background: black;
@@ -114,15 +118,13 @@ $border-color:#d9d9d9;
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
-  
+  }
 }
+.gulu-dialog-wrapper-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
 }
-.gulu-dialog-wrapper-wrapper{
-        position:fixed;
-        left:50%;
-        top:50%;
-        transform:translate(-50%,-50%);
-        z-index: 11;
-    }
-
 </style>
