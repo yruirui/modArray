@@ -1,25 +1,19 @@
 <template>
   <h1>Tab示例1</h1>
-  因为使用的key值为title，所以Tab组件的title不能重复，不然会出现问题
-  <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
-  </Tabs>
+  注意：因为使用的key值为title，所以Tab组件的title不能重复，
+  <Demo :component="TabsDemo1"></Demo>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-import Tab from '../lib/Tab.vue'
-import Tabs from '../lib/Tabs.vue'
+import Demo from "./Demo.vue";
+import TabsDemo1 from "../components/TabsDemo1.vue";
 export default {
- components:{Tabs,Tab},
- setup(){
-   const x=ref('导航1')
-   return {x}
- }
-}
+  components: { Demo },
+  setup() {
+    return { TabsDemo1 };
+  },
+};
 </script>
 
 <style>
-
 </style>

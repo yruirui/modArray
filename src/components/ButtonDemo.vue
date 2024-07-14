@@ -1,48 +1,32 @@
 <template>
-  <div>这里是Button的示例</div>
-  <h1>示例1</h1>
-  <div>
-    <Button theme="button">你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>   
-  </div>
-  <h1>示例2</h1>
-  <div>
-    <Button size="big">你好</Button>
-    <Button size="normal">你好</Button>
-    <Button size="small">你好</Button>   
-  </div>
-   <div>
-    <Button size="big" theme="link">big-link</Button>
-    <Button size="big" theme="normal">big-normal</Button>
-    <Button size="big" theme="small">big-small</Button>
-   </div>
-   <h1>示例三</h1>
-   <div>
-    <Button >普通按钮</Button>
-    <Button level="main">主要按钮</Button>
-    <Button level="danger">危险按钮</Button>
-   </div>
-   <h1>示例四</h1>
-   <div>
-    <Button theme="button"  :disabled="true">禁用按钮</Button>
-    <Button theme="link" disabled>禁用按钮</Button>
-    <Button theme="text" disabled>禁用按钮</Button>
-   </div>
-   <h1>示例五</h1>
-   <div>
-    <Button loading>加载中</Button>
-    <Button >加载完毕</Button>
-   </div>
+  <h1>这里是Button的示例</h1>
+
+  <Demo :component="ButtonDemo1" />
+
+  <Demo :component="ButtonDemo2" />
+
+  <Demo :component="ButtonDemo3" />
+
+  <Demo :component="ButtonDemo4" />
+
+  <Demo :component="ButtonDemo5" />
 </template>
 
 <script lang="ts" >
-import Button from '../lib/Button.vue'
+import Demo from "./Demo.vue";
+import Button from "../lib/Button.vue";
+import ButtonDemo1 from "../components/ButtonDemo1.vue";
+import ButtonDemo2 from "../components/ButtonDemo2.vue";
+import ButtonDemo3 from "../components/ButtonDemo3.vue";
+import ButtonDemo4 from "../components/ButtonDemo4.vue";
+import ButtonDemo5 from "../components/ButtonDemo5.vue";
 export default {
-components:{Button}
-}
+  components: { Button, Demo },
+  setup() {
+    return { ButtonDemo1, ButtonDemo2, ButtonDemo3, ButtonDemo4, ButtonDemo5 };
+  },
+};
 </script>
 
 <style>
-
 </style>
