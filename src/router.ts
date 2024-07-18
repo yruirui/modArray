@@ -8,6 +8,7 @@ import DialogDemo from './components/DialogDemo.vue'
 import Intro from './views/intro.vue'
 import getStart from './views/getStart.vue'
 import install from './views/install.vue'
+import keyBoardDemo from './components/keyBoardDemo.vue'
 
 const history=createWebHashHistory()
 export const router=createRouter({
@@ -24,6 +25,7 @@ export const router=createRouter({
             {path:'intro',component:Intro},
             {path:'get-start',component:getStart},
             {path:'install',component:install},
+            {path:'keyBoardDemo',component:keyBoardDemo},
             
         ]}
     ]

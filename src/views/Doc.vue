@@ -24,7 +24,7 @@
             <router-link to="/doc/tab">Tabs组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/tab">日历组件</router-link>
+            <router-link to="/doc/keyBoardDemo">键盘组件</router-link>
           </li>
           <li>
             <router-link to="/doc/tab">验证码组件</router-link>
