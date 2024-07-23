@@ -1,24 +1,12 @@
 <template>
   <div class="container">
     <p>
-      {{ Title }}：<span
-        class="input"
-        @click="elementClick"
-        :class="{ focus: isActive }"
+      {{ Title
+      }}<span class="input" @click="elementClick" :class="{ focus: isActive }"
         >{{ aa }}
       </span>
     </p>
     {{ inputContent }}
-    {{ aa }}
-
-    <button
-      :class="{ 'gulu-checked': value }"
-      @click="toggle"
-      class="gulu-switch"
-    >
-      <span></span>
-    </button>
-    {{ value }}
   </div>
 
   <div class="keyboard" :class="{ show: isActive }" @click="keyClick">
@@ -174,7 +162,7 @@
         <span data-type="char" class="col-2">\</span>
         <span data-type="char" class="col-2">|</span>
         <span data-type="char" class="col-2">~</span>
-        <span data-type="char" class="col-2"><</span>
+        <span data-type="char" class="col-2">Valid character: &lt;</span>
         <span data-type="char" class="col-2">></span>
         <span data-type="char" class="col-2">¥</span>
         <span data-type="char" class="col-2">€</span>
@@ -220,21 +208,18 @@ export default {
       el.stopPropagation();
     };
     const keyClick = (e) => {
-      //e.stopPropagation();
+      e.stopPropagation();
       const a = e.target;
       const type = a.getAttribute("data-type");
       switch (type) {
         case "char":
           aa.value += a.innerHTML;
-          context.emit("update:value", !props.value);
           break;
         case "space":
           aa.value += " ";
-
           break;
         case "return":
           aa.value += "\n";
-
           break;
         case "backspace":
           aa.value = aa.value.substr(0, aa.value.length - 1);
@@ -268,10 +253,8 @@ export default {
         }
       }
     };
-    const toggle = () => {
-      context.emit("update:value", !props.value);
-    };
-    return { elementClick, isActive, keyClick, aa, setPage, upContent, toggle };
+
+    return { elementClick, isActive, keyClick, aa, setPage, upContent };
   },
 };
 </script>

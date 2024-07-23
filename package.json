@@ -17,6 +17,9 @@
     "@vue/compiler-sfc": "^3.5.0-alpha.2",
     "marked": "^13.0.2",
     "sass": "^1.26.10",
+    "svg-sprite-loader": "^4.1.6",
+    "svg-sprite-loader-mod": "^4.1.6-mod1",
+    "svgo-loader": "^2.2.1",
     "typescript": "^5.5.3",
     "vite": "^1.0.0-rc.1"
   },

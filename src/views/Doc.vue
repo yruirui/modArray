@@ -26,12 +26,12 @@
           <li>
             <router-link to="/doc/keyBoardDemo">键盘组件</router-link>
           </li>
-          <li>
+          <!-- <li>
             <router-link to="/doc/tab">验证码组件</router-link>
-          </li>
-          <li><router-link to="/doc/tab">图标组件</router-link></li>
+          </li> -->
+          <!-- <li><router-link to="/doc/svgIconDemo">图标组件</router-link></li> -->
           <li>
-            <router-link to="/doc/tab">布局组件</router-link>
+            <router-link to="/doc/layOutDemo">布局组件</router-link>
           </li>
         </ol>
       </aside>

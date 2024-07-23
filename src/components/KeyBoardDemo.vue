@@ -1,18 +1,14 @@
 <template>
-  <keyBoard :Title="Title" v-model:inputContent="y" v-model:value="bool" />
+  <Demo :component="keyBoartDemo1"></Demo>
 </template>
 
 <script>
-import { ref } from "vue";
-import keyBoard from "../lib/keyBoard.vue";
+import Demo from "./Demo.vue";
+import keyBoartDemo1 from "./keyBoartDemo1.vue";
 export default {
-  components: { keyBoard },
+  components: { Demo },
   setup() {
-    const Title = "请输入密码";
-    const y = ref("zaq");
-    const bool = ref(true);
-
-    return { Title, y, bool };
+    return { keyBoartDemo1 };
   },
 };
 </script>
