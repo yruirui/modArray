@@ -1,6 +1,11 @@
 <demo>键盘组件</demo>
 <template>
-  <keyBoard :Title="Title" v-model:inputContent="y"></keyBoard>
+  <keyBoard
+    :Title="Title"
+    v-model:inputContent="y"
+    @some-event="callback"
+  ></keyBoard>
+  <span>当前输入的input的值：{{ y }}</span>
 </template>
 
 <script lang="ts">
@@ -11,7 +16,11 @@ export default {
   setup() {
     const Title = "请输入密码";
     const y = ref("");
-    return { Title, y };
+
+    const callback = (e) => {
+      y.value = e;
+    };
+    return { Title, y, callback };
   },
 };
 </script>

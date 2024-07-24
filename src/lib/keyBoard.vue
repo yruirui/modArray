@@ -6,7 +6,7 @@
         >{{ aa }}
       </span>
     </p>
-    {{ inputContent }}
+    <button @click="$emit('someEvent', aa)">点击我获取当前input的值</button>
   </div>
 
   <div class="keyboard" :class="{ show: isActive }" @click="keyClick">
@@ -196,13 +196,12 @@ import { ref } from "vue";
 export default {
   props: {
     Title: { type: String, default: "请输入账号" },
-    inputContent: { type: String, default: "" },
-    value: Boolean,
   },
-  setup(context, props) {
+
+  setup() {
     const isActive = ref(false);
     const aa = ref("");
-
+    const a = () => {};
     const elementClick = (el) => {
       isActive.value = !isActive.value;
       el.stopPropagation();
@@ -211,15 +210,18 @@ export default {
       e.stopPropagation();
       const a = e.target;
       const type = a.getAttribute("data-type");
+
       switch (type) {
         case "char":
           aa.value += a.innerHTML;
           break;
         case "space":
           aa.value += " ";
+
           break;
         case "return":
           aa.value += "\n";
+
           break;
         case "backspace":
           aa.value = aa.value.substr(0, aa.value.length - 1);
@@ -254,7 +256,7 @@ export default {
       }
     };
 
-    return { elementClick, isActive, keyClick, aa, setPage, upContent };
+    return { elementClick, isActive, keyClick, aa, setPage, upContent, a };
   },
 };
 </script>

@@ -67,6 +67,7 @@ export default {
     flex-grow: 1;
     flex-direction: column;
     margin-left: 20px;
+    margin-right: 20px;
     overflow-y: auto;
   }
 }
