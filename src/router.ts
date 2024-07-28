@@ -10,6 +10,7 @@ import getStart from './views/getStart.vue'
 import install from './views/install.vue'
 import keyBoardDemo from './components/keyBoardDemo.vue'
 import layOutDemo from './components/layOutDemo.vue'
+import DateDEMO from './components/DateDEMO.vue'
 
 const history=createWebHashHistory()
 export const router=createRouter({
@@ -28,6 +29,7 @@ export const router=createRouter({
             {path:'install',component:install},
             {path:'keyBoardDemo',component:keyBoardDemo},
             {path:'layOutDemo',component:layOutDemo},
+            {path:'DateDEMO',component:DateDEMO},
             
         ]}
     ]

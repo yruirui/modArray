@@ -35,9 +35,7 @@
         <span class="col-2" data-type="char">l</span>
       </div>
       <div class="row">
-        <span class="col-3" data-type="uppercase"
-          ><i class="iconfont icon-caps-lock"></i
-        ></span>
+        <span class="col-3" data-type="uppercase">lock</span>
         <span class="col-2" data-type="char">z</span>
         <span class="col-2" data-type="char">x</span>
         <span class="col-2" data-type="char">c</span>
@@ -45,9 +43,7 @@
         <span class="col-2" data-type="char">b</span>
         <span class="col-2" data-type="char">n</span>
         <span class="col-2" data-type="char">m</span>
-        <span class="col-3" data-type="backspace"
-          ><i class="iconfont icon-backspace"></i
-        ></span>
+        <span class="col-3" data-type="backspace">detele</span>
       </div>
       <div class="row">
         <span class="col-4" data-type="number">123</span>
@@ -81,9 +77,7 @@
         <span class="col-2" data-type="char">L</span>
       </div>
       <div class="row">
-        <span class="col-3" data-type="lowercase"
-          ><i class="iconfont icon-caps-lock"></i
-        ></span>
+        <span class="col-3" data-type="lowercase">lock </span>
         <span class="col-2" data-type="char">Z</span>
         <span class="col-2" data-type="char">X</span>
         <span class="col-2" data-type="char">C</span>
@@ -91,9 +85,7 @@
         <span class="col-2" data-type="char">B</span>
         <span class="col-2" data-type="char">N</span>
         <span class="col-2" data-type="char">M</span>
-        <span class="col-3" data-type="backspace"
-          ><i class="iconfont icon-backspace"></i
-        ></span>
+        <span class="col-3" data-type="backspace"> delete</span>
       </div>
       <div class="row">
         <span class="col-4" data-type="number">123</span>
@@ -134,12 +126,10 @@
         <span class="col-2" data-type="char">'</span>
         <span class="col-2" data-type="char">"</span>
         <span class="col-2" data-type="char">\`</span>
-        <span class="col-3" data-type="backspace"
-          ><i class="iconfont icon-backspace"></i
-        ></span>
+        <span class="col-3" data-type="backspace">delete </span>
       </div>
       <div class="row">
-        <span class="col-4" data-type="number">ABC</span>
+        <span class="col-4" data-type="uppercase">ABC</span>
         <span class="col-12" data-type="space">space</span>
         <span class="col-4" data-type="return">return</span>
       </div>
@@ -177,9 +167,7 @@
         <span data-type="char" class="col-2">'</span>
         <span data-type="char" class="col-2">"</span>
         <span data-type="char" class="col-2">\`</span>
-        <span data-type="backspace" class="col-3"
-          ><i class="iconfont icon-backspace"></i
-        ></span>
+        <span data-type="backspace" class="col-3">delete</span>
       </div>
       <div class="row">
         <span data-type="lowercase" class="col-4">ABC</span>
@@ -295,7 +283,7 @@ export default {
   }
 }
 .keyboard {
-  background-color: #2c2121;
+  background-color: #eb2e6a;
   position: fixed;
   width: 100%;
   max-width: 600px;

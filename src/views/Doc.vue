@@ -33,6 +33,9 @@
           <li>
             <router-link to="/doc/layOutDemo">布局组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/DateDEMO">日历组件</router-link>
+          </li>
         </ol>
       </aside>
       <main><router-view></router-view></main>
@@ -62,6 +65,13 @@ export default {
   > aside {
     flex-direction: column;
     overflow-y: auto;
+    background: rgb(191, 132, 230);
+    background: linear-gradient(
+      198deg,
+      rgba(191, 132, 230, 1) 0%,
+      rgba(29, 235, 253, 1) 66%,
+      rgba(252, 69, 182, 1) 100%
+    );
   }
   > main {
     flex-grow: 1;
