@@ -1,4 +1,4 @@
-<demo >>Button的禁用样式</demo>
+<demo >Button的禁用样式</demo>
 <template>
   <div>
     <Button theme="button" :disabled="true">禁用按钮</Button>
