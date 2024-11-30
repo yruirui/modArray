@@ -22,7 +22,6 @@
         :key="index"
         :class="{
           disableLi: isDisabledDay(index),
-          'canlendar-days-today': isToday(index),
         }"
       >
         {{ item }}
@@ -31,7 +30,7 @@
 
     <div class="canlendar-actions">
       <div class="canlendar-action-left">
-        <Button id="toDay" @click="toDay1">今天</Button>
+        <Button id="toDay" @click="toDay1">本月</Button>
       </div>
       <div class="canlendar-action-right">
         <Button id="prevMonth" @click="prevMonth">上月</Button
@@ -75,7 +74,7 @@ export default {
 
       for (let i = 1; i < yuechuxingqiji; i++) {
         const d = new Date(yuechu - 86400 * 1000 * i);
-        listItems.value.push(d.getDate());
+        listItems.value.unshift(d.getDate());
         n += 1;
         firstDayOfMonth.value += 1;
       }
@@ -127,6 +126,7 @@ export default {
         currentTime.getMonth(),
         listItems.value[index]
       );
+      console.log(currentTime);
       return date.toDateString() === today.value.toDateString();
     };
 

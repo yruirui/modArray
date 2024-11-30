@@ -33,9 +33,7 @@
           <li>
             <router-link to="/doc/layOutDemo">布局组件</router-link>
           </li>
-          <li>
-            <router-link to="/doc/DateDEMO">日历组件</router-link>
-          </li>
+          <li></li>
         </ol>
       </aside>
       <main><router-view></router-view></main>
