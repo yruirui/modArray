@@ -1,7 +1,7 @@
 <template>
-  <MarkDown path="../markdown/install.md"></MarkDown>
+  <MarkDown path="/src/markdown/install.md"></MarkDown>
 </template>
-  
+
   <script>
 export default {};
 </script>
