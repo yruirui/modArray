@@ -15,7 +15,7 @@ import {Button, Tabs, Switch, Dialog} from "king-ui"
 
 代码示例：
 
-```
+
 
 <template>
   <div>

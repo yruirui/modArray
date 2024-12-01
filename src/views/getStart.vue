@@ -1,10 +1,11 @@
 <template>
-  <MarkDown path="/src/markdown/get-start.md">
-    # 开始使用 请先[安装](#/doc/install)本组件库。
-    然后在你的代码中写入下面的代码 ``` import {Button, Tabs, Switch, Dialog}
-    from "king-ui" ``` 就可以使用我提供的组件了。 ## Vue 单文件组件 代码示例：
-    ```
-  </MarkDown>
+  <article class="markdown-body">
+    <h1>开始使用</h1>
+    <p>请先[安装]本组件库。</p>
+    <p>然后在你的代码中写入下面的代码</p>
+    <pre><code>import {Button, Tabs, Switch, Dialog} from "momoUI" </code></pre>
+    <p>就可以使用我提供的组件了。 ## Vue单文件组件 代码示例：</p>
+  </article>
 </template>
 
 <script>
