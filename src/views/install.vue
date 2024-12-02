@@ -6,7 +6,7 @@
 
     <p>或</p>
 
-    <pre><code>yarn add king-ui</code></pre>
+    <pre><code>yarn add modArryUI</code></pre>
 
     <p>下一节 :<router-link to="/doc/get-start">开始使用</router-link></p>
   </article>
