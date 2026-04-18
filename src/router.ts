@@ -11,6 +11,7 @@ import install from './views/install.vue'
 import keyBoardDemo from './components/keyBoardDemo.vue'
 import layOutDemo from './components/layOutDemo.vue'
 import DateDEMO from './components/DateDEMO.vue'
+import CssAnimations from './components/CA.vue'
 
 const history=createWebHashHistory()
 export const router=createRouter({
@@ -30,7 +31,7 @@ export const router=createRouter({
             {path:'keyBoardDemo',component:keyBoardDemo},
             {path:'layOutDemo',component:layOutDemo},
             {path:'DateDEMO',component:DateDEMO},
-            
+            {path:'CssAnimations',component:CssAnimations}
         ]}
     ]
 

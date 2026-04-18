@@ -35,6 +35,12 @@
           </li>
           <li></li>
         </ol>
+        <h2>动画列表</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/CssAnimations">交替黑白球</router-link>
+          </li>
+        </ol>
       </aside>
       <main><router-view></router-view></main>
     </div>
